@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Hamburger Menu</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <nav>
+        <h1>AYOOLA</h1>
+
+        <ul>
+          <li class="hideEl"><a href="#">Services</a></li>
+          <li class="hideEl"><a href="#">Products</a></li class="hideEl">
+          <li class="hideEl"><a href="#">About </a></li>
+          <li class="hideEl"><a href="#">Login</a></li>
+
+          <svg
+            class="menu-icon"
+            id="hamburger"
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#5f6368"
+          >
+            <path
+              d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+            />
+          </svg>
+        </ul>
+
+        <ul class="sidebar" id="sidebar">
+          <svg
+            class="close-icon"
+            id="close-icon"
+            idxmlns="http://www.w3.org/2000/svg"
+            height="30px"
+            viewBox="0 -960 960 960"
+            width="30px"
+            fill="#5f6368"
+          >
+            <path
+              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+            />
+          </svg>
+
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">About </a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <script>
+      // function showsideBar() {
+      //   const side = document.querySelector(".sidebar");
+      //   side.style.display = "flex";
+      // }
+
+      const side = document.getElementById("sidebar");
+
+      const hamburger = document.getElementById("hamburger");
+
+      const closeBar = document.getElementById("close-icon");
+
+      hamburger.addEventListener("click", () => {
+        side.style.display = "flex";
+      });
+
+      closeBar.addEventListener("click", () => {
+        side.style.display = "none";
+      });
+    </script>
+  </body>
+</html>
